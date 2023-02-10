@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "direct-outlook-377314",
+  "private_key_id": "c419194b5a81e0e2310cd1114ac28edd977a78d5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDerejEnveLkUmq\n3P9E1EFECRh2DfezLS+PLil+nXM7gz8rzHUF3rgnt0iaBLQnmyQqiPpqAvNJSVFa\ntng3G2wkbQ8K7018JbnSDzB4tJ0PGCcveqX7AQ+tS9h1zfpCJS7xgJE2sorSUjTn\n3ipdPziNounJp8SzIhN/BLQRERcdIcUHjnSq4Gb+FTtNbeAgP/TNeYynUsOj9A15\n9GD3gnAs9PE5QAmI8ZzZ9ywv9uX+OQOmdGonUTkRZ1D3+Lsc4VGuYfo1sL8dasPc\nTzOqU1IxkwNkMWrl8N5mKI8MrzJRNMIsM6f1D+IeueBxrVSaJCd6jsZ7dlikBqKf\nSrRk36h/AgMBAAECggEAbJ3JnzanKpXIqCY6AXnDCAujudngS66rtxxeMxtb3NiN\nFLEbF6zmiMDXEgFfWr5K6tB7zP/5aXLw0t2UT9T5b98eakgFtJu2QucTzpzSy00N\nuBQMKB4BZpdLU1MQUflPJ499xX9bRXHByqPMaEVxMW0YujsyL+pcNiW2K2j5rEQm\ndoT6cAMTG5gRUapfAa/Rajz1V5E4Ak1IEgxBl5rNXsgQ4/z14IF2F43s2EL1y1rw\nb6m279qqKGZWfp9ssz0UUubfOrLawXLsWtKPdw0aGHiBTnCABJ9ROXbff2lgPMHn\nIcE5T/uwUsElAiHf5cLAY06OaEin1gmIc7T9lgZg2QKBgQD44Xes2y+18V9hItWy\nwMAg+CGfHSCIHKaTj/T9X8Ol47/Ve0hkhityWVFAomS6zeq73fE/JQoP1j2QD48v\nFerQAKFfpxvB/opdwYsG6HGWT0wBSdkK70Ur8yNDX3siqME9hy1UArRMGB8g9ABf\nI186zLA5GpBEpJlLx4eLe6fRlQKBgQDlDJI2Ty+CaYZQ3e8RyLy8ywzEB2B3tNfh\nRiViEoI7X7kimMERwl50TGsKS5OT5Obzlm1x3pKEx++xy+102JKlpudaymcrfGpk\nBkIBnKmw4kvtVHZzQSUSSzwg4twV0sQIuDWsFX1vOvFVz80eqU3dU65H4Ekdg5eq\nvlEKLuX0wwKBgAnikqlH72YvlxU5l/lIlJj6ogM62e7uDGOyBQ4HPrMZD6aABgkQ\nFyushoClspCE2zzo/MsAQp0MaleNdqdtHG10iPROo9iZro84v7ffhZttvNwUPc2k\nYT/0oULsyOxAfaRe+RrsHJMlJh9d8aHVutOQC7PI7U/8paYP379XgvvdAoGAHVjf\n/v9kWfRFVmUpNYEf1Zy6lP9Q9+V+54lCTu+KKitYoDssOadKzOHhsR7/2KoygTFb\n8oQPB95KMuCrGxaIq5rX98UJNQQq6Yf3uxckktpb2hvBVYEaS97B5IDMrCsmHOvl\nTJgwSyklNNZ8NJqCtIH9SY5OL+7lZuYdog1iP1sCgYAAyClX/bQbtmOosZ1CnlEu\nFHhOBQXa9jVo/gFrE8/pMIPniksEwtRBoZ0turc0gafZ2fwyfYa7m5aGhkzj99Ci\ng/Aww6l+2l6QYF85kWnwYRjKHgKCiMFNmWLfHlJxM5oOBVmHBQTt0ZrrI+lB3Ds1\n3Llcvaz1xTDheINb/WrBhQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "api-sheets-sq@direct-outlook-377314.iam.gserviceaccount.com",
+  "client_id": "111223160515096393789",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/api-sheets-sq%40direct-outlook-377314.iam.gserviceaccount.com"
+}

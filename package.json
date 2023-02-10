@@ -1,0 +1,28 @@
+{
+  "name": "google-sheets-node",
+  "version": "1.0.0",
+  "description": "Apis para conectar a GoogleSheet",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrgrimshaw/google-sheets-node.git"
+  },
+  "author": "JP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrgrimshaw/google-sheets-node/issues"
+  },
+  "homepage": "https://github.com/jrgrimshaw/google-sheets-node#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "googleapis": "^110.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🖥️ Registro</title>
+    <!-- BOOSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+  <div class="container">
+    <header>
+<!-- Hero -->
+<div class="p-5 text-center bg-image rounded-3" style="
+    background-image: url('https://civideportes.com.co/wp-content/uploads/2019/08/Cancha-de-f%C3%BAtbol-11.jpg');
+    height: 400px;
+  ">
+  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+    <div class="d-flex justify-content-center align-items-center h-150">
+      <div class="text-white">
+        <h1 class="mb-3">PROYECTO REMODELACIÓN CANCHA</h1>
+        <h4 class="mb-3">"Douglas Thompson"</h4>
+       </div>
+    </div>
+  </div>
+</div>
+<!-- Hero -->
+   </header>
+    <div class="container my-5">
+    </div>
+      <div class="container">
+        <div class="row">
+          <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">
+                  <div class="container my-5">
+                  Ingrese todos los datos que se le piden
+                </h5>
+                <form action="" method="POST" class="row g-3 needs-validation" novalidate>
+                  <div>
+                    <div class="col-me-4"> 
+                      <label for="nombre" class="form-label">Nombre</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Nombre y Apellido" required
+                        />
+                      </div>
+                   
+                  </div>
+                  <div>
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="telefono"
+                      name="telefono"
+                      placeholder="No. de teléfono" required
+                    />
+                  </div>
+                  <div>
+                    <label for="correo" class="form-label">Teléfono</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="correo"
+                      name="correo"
+                      placeholder="nombre@dominio.com" required
+                    />
+                  </div>
+                  <div>
+                    <label for="metros" class="form-label">Cantidad de Mt²</label>
+                    <select
+                      id="metros"
+                      class="form-select"
+                      name="metros"
+                      onchange="calculateTotal()"
+                    >
+                      <option value="1" type="number">1</option>
+                      <option value="2" type="number">2</option>
+                      <option value="3" type="number">3</option>
+                      <option value="4" type="number">4</option>
+                      <option value="5" type="number">5</option>
+                    </select>
+                  </div>
+                  <div>
+                    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+                      <label for="precio" class="form-label">Precio por Mt²</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="precio"
+                        name="precio"
+                        value="660"
+                        readonly
+                      />
+                     </div>
+              
+                  </div>
+                  <div>
+                    <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+                      <label for="total" class="form-label">Total</label>
+                      <input type="number" class="form-control" id="total" name="total" readonly />
+                    </div>
+                   </div>
+                  <div>
+                    <label class="form-check-label" for="constancia" class="form-label"
+                      >¿Necesita constancia de donación?</label
+                    ><br />
+                    <input class="form-check-input"
+                      type="radio"
+                      name="constancia"
+                      value="Si"
+                      onclick="showHideFields()"
+                    />
+                    Si
+                    <input class="form-check-label"
+                      type="radio"
+                      name="constancia"
+                      value="No"
+                      onclick="showHideFields()"
+                    />
+                    No <br /><br />
+                    <div class="form-label" id="empresa" style="display: none">
+                      Nombre de la Empresa <input type="text" class="form-control" name="empresa" />
+                    </div>
+                    <br />
+                    <div class="form-label" id="rtn" style="display: none">
+                      RTN <input type="text" class="form-control" name="rtn" />
+                    </div>
+                    <div>
+                      <input
+                        type="checkbox"
+                        class="form-check-input"
+                        id="acceptTerms"
+                      />
+                      <label class="form-check-label" for="acceptTerms" type="checkbox"
+                        >Acepto lo términos y condiciones!!!</label
+                      >
+                    </div>
+                    <div>
+                      <div class="container my-5">
+                      <div class="d-grid gap-2 col-6 mx-auto">
+                      <button type="submit" class="btn btn-outline-primary">
+                        Comprar
+                      </button>
+                    </div>
+                  </div>
+                    </div>
+
+                    <div>
+                      <label for="pago"></label>
+                      <input type="hidden" id="pago" name="pago" readonly />
+                    </div>
+                    <label for="saldo"></label>
+                    <input type="hidden" id="saldo" name="saldo" readonly />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CALCULAR TOTAL -->
+      <script>
+        function calculateTotal() {
+          var metro = parseInt(document.getElementById("metros").value);
+          var prec = 660;
+          var total = metro * prec;
+          var pag = 0;
+          var sald = total;
+          document.getElementById("total").value = total;
+          document.getElementById("pago").value = pag;
+          document.getElementById("saldo").value = sald;
+        }
+      </script>
+      <!-- CONDICIONES DE MOSTAR SI QUIEREN CONSTANCIA Y OCULATAR SI NO QUIEREN CONSTANCIA -->
+      <script>
+        function showHideFields() {
+          var radioButton = document.querySelector(
+            'input[name="constancia"]:checked'
+          ).value;
+          var empresa = document.getElementById("empresa");
+          var rtn = document.getElementById("rtn");
+          if (radioButton === "Si") {
+            empresa.style.display = "block";
+            rtn.style.display = "block";
+          } else {
+            empresa.style.display = "none";
+            rtn.style.display = "none";
+          }
+        }
+      </script>
+
+      <!-- BOOSTRAP -->
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"
+      ></script>
+    </div>
+
+    <footer class="bg-dark text-center text-white">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto">
+                <p class="pt-2">
+                  <strong>¿Cuál es la esencia de la vida? Servir a otros y hacer el bien</strong>
+                </p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="https://www.facebook.com/jpineda1388"> JP</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+  </body>
+</html>
