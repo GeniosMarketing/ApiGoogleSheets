@@ -67,7 +67,7 @@
                     />
                   </div>
                   <div>
-                    <label for="correo" class="form-label">Teléfono</label>
+                    <label for="correo" class="form-label">Correo</label>
                     <input
                       type="email"
                       class="form-control"
@@ -89,6 +89,12 @@
                       <option value="3" type="number">3</option>
                       <option value="4" type="number">4</option>
                       <option value="5" type="number">5</option>
+                      <option value="6" type="number">6</option>
+                      <option value="7" type="number">7</option>
+                      <option value="8" type="number">8</option>
+                      <option value="9" type="number">9</option>
+                      <option value="10" type="number">10</option>
+                      
                     </select>
                   </div>
                   <div>
@@ -162,6 +168,18 @@
                     </div>
                     <label for="saldo"></label>
                     <input type="hidden" id="saldo" name="saldo" readonly />
+                    <div>
+                    <label for="destinatario"></label>
+                    <input type="hidden" id="destinatario" name="destinatario" readonly />
+                    <div>
+                      <label for="estado1"></label>
+                      <input type="hidden" id="estado1" name="estado1" readonly />
+                      </div>
+                      <div>
+                        <label for="responsable"></label>
+                        <input type="hidden" id="responsable" name="responsable" readonly />
+                        </div>
+                    </div>
                   </div>
                 </form>
               </div>
@@ -178,9 +196,15 @@
           var total = metro * prec;
           var pag = 0;
           var sald = total;
+          var estado = "SINPAGO"
+          var responsabilidad = "Humberto Giron"
+          var email ="geniosmarketinghn@gmail.com"
           document.getElementById("total").value = total;
           document.getElementById("pago").value = pag;
           document.getElementById("saldo").value = sald;
+          document.getElementById("estado1").value = estado;
+          document.getElementById("responsable").value = responsabilidad;
+          document.getElementById("destinatario").value = email;
         }
       </script>
       <!-- CONDICIONES DE MOSTAR SI QUIEREN CONSTANCIA Y OCULATAR SI NO QUIEREN CONSTANCIA -->

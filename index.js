@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
   });
 
 app.post("/", async (req, res)=>{
-  const { nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo} = req.body;
+  const { nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, destinatario, estado1, responsable} = req.body;
 
   const auth = new google.auth.GoogleAuth({
     keyFile: "keys.json",
@@ -37,24 +37,24 @@ app.post("/", async (req, res)=>{
    const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Registro!A:K",
+    range: "Registro!A:N",
    });
 
    // Escribir en las Filas de la hoja de calculo
    await googleSheets.spreadsheets.values.append({
     auth,
     spreadsheetId,
-    range: "Registro!A:K",
+    range: "Registro!A:N",
     valueInputOption: "USER_ENTERED",
     resource: {
         values: [
-            [nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo]],
+            [nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, destinatario, estado1, responsable]],
     },
    });
 
 
 
-  res.send("Registros guardados correctamente...!");
+   res.sendFile(__dirname + '/respuesta.html');
 });
 
 app.listen(3000, (req, res) => console.log("Escuchando en el puerto 3000"));

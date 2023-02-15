@@ -1,0 +1,11 @@
+//transporte_cuenta.json
+{
+    "service": "gmail",
+    "auth": {
+      "type": "OAuth2",
+      "user": "geniosmarketinghn@gmail.com",
+      "clientId": "924483394243-6utd1l9ofdelic38euqd6fo4tomqq5fm.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04XxXhyJvKcWICgYIARAAGAQSNwF-L9IrVoY3JsV0hDYnlqfQ58VstVjZtpUvbkMUqFTCZp7bTkuVFalJZcUgNyEcxEzEQBHXN-g"
+    }
+  }
