@@ -1,6 +1,8 @@
 const { urlencoded } = require("express");
 const express = require("express");
 const {google} = require("googleapis");
+const nodemailer = require('nodemailer');
+
 //const keys = require('./keys.json');
 
 const app = express();
@@ -12,20 +14,18 @@ app.get("/", (req, res) => {
   });
 
 app.post("/", async (req, res)=>{
-  const { nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, destinatario, estado1, responsable} = req.body;
-
+  const {num_compra, nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, formaPago, destinatario, estado1, responsable} = req.body;
   const auth = new google.auth.GoogleAuth({
-    keyFile: "keys.json",
+    keyFile: "key-escuela.json",
     scopes: "https://www.googleapis.com/auth/spreadsheets",
   });
 
    // Create client instance for auth
    const client = await auth.getClient();
 
-
    // Instance of Google Sheets API
    const googleSheets = google.sheets({ version: "v4", auth: client });
-   const spreadsheetId = "1qr606M1U3pD_wqujj00Q95-uscmV4iA6sPcyPSnuUTQ";
+   const spreadsheetId = "1M3Sl82UFV2GPJwmIv7T2c85lpGwJDavtY5Ylcxofn58";
 
   // Get metadata about spreadsheet
   const metaData = await googleSheets.spreadsheets.get({
@@ -37,21 +37,20 @@ app.post("/", async (req, res)=>{
    const getRows = await googleSheets.spreadsheets.values.get({
     auth,
     spreadsheetId,
-    range: "Registro!A:N",
+    range: "Registro!A:P",
    });
 
    // Escribir en las Filas de la hoja de calculo
    await googleSheets.spreadsheets.values.append({
     auth,
     spreadsheetId,
-    range: "Registro!A:N",
+    range: "Registro!A:P",
     valueInputOption: "USER_ENTERED",
     resource: {
         values: [
-            [nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, destinatario, estado1, responsable]],
+            [num_compra, nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, formaPago, destinatario, estado1, responsable]],
     },
    });
-
 
 
    res.sendFile(__dirname + '/respuesta.html');

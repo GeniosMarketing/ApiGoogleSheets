@@ -13,12 +13,12 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+<body onload="generarNumCompra()">
   <div class="container">
     <header>
 <!-- Hero -->
 <div class="p-5 text-center bg-image rounded-3" style="
-    background-image: url('https://civideportes.com.co/wp-content/uploads/2019/08/Cancha-de-f%C3%BAtbol-11.jpg');
+    background-image: url('https://i.ibb.co/M8Y7vTs/1.png');
     height: 400px;
   ">
   <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
@@ -40,11 +40,25 @@
             <div class="card-body">
                 <h5 class="card-title">
                   <div class="container my-5">
-                  Ingrese todos los datos que se le piden
+                            
                 </h5>
+
+
                 <form action="" method="POST" class="row g-3 needs-validation" novalidate>
                   <div>
                     <div class="col-me-4"> 
+                      <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3" role="alert">
+                        <label for="num_compra" class="form-label">Compra No.</label>
+                        <input type="text" class="form-control" id="num_compra" name="num_compra" value="" readonly>
+                      </div>  
+                      
+                      <script>
+                        function generarNumCompra() {
+                          var num_compra = Math.floor(Math.random() * 1000000);
+                          document.getElementById("num_compra").value = num_compra;
+                        }
+                        window.onload = generarNumCompra;
+                      </script>  
                       <label for="nombre" class="form-label">Nombre</label>
                       <input
                         type="text"
@@ -94,6 +108,46 @@
                       <option value="8" type="number">8</option>
                       <option value="9" type="number">9</option>
                       <option value="10" type="number">10</option>
+                      <option value="11" type="number">11</option>
+                      <option value="12" type="number">12</option>
+                      <option value="13" type="number">13</option>
+                      <option value="14" type="number">14</option>
+                      <option value="15" type="number">15</option>
+                      <option value="16" type="number">16</option>
+                      <option value="17" type="number">17</option>
+                      <option value="18" type="number">18</option>
+                      <option value="19" type="number">19</option>
+                      <option value="20" type="number">20</option>
+                      <option value="21" type="number">21</option>
+                      <option value="22" type="number">22</option>
+                      <option value="23" type="number">23</option>
+                      <option value="24" type="number">24</option>
+                      <option value="25" type="number">25</option>
+                      <option value="26" type="number">26</option>
+                      <option value="27" type="number">27</option>
+                      <option value="28" type="number">28</option>
+                      <option value="29" type="number">29</option>
+                      <option value="30" type="number">30</option>
+                      <option value="31" type="number">31</option>
+                      <option value="32" type="number">32</option>
+                      <option value="33" type="number">33</option>
+                      <option value="34" type="number">34</option>
+                      <option value="35" type="number">35</option>
+                      <option value="36" type="number">36</option>
+                      <option value="37" type="number">37</option>
+                      <option value="38" type="number">38</option>
+                      <option value="39" type="number">39</option>
+                      <option value="40" type="number">40</option>
+                      <option value="41" type="number">41</option>
+                      <option value="42" type="number">42</option>
+                      <option value="43" type="number">43</option>
+                      <option value="44" type="number">44</option>
+                      <option value="45" type="number">45</option>
+                      <option value="46" type="number">46</option>
+                      <option value="47" type="number">47</option>
+                      <option value="48" type="number">48</option>
+                      <option value="49" type="number">49</option>
+                      <option value="50" type="number">50</option>
                       
                     </select>
                   </div>
@@ -106,6 +160,7 @@
                         id="precio"
                         name="precio"
                         value="660"
+                        step="0.01"
                         readonly
                       />
                      </div>
@@ -114,7 +169,7 @@
                   <div>
                     <div class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
                       <label for="total" class="form-label">Total</label>
-                      <input type="number" class="form-control" id="total" name="total" readonly />
+                      <input type="number" class="form-control" id="total" name="total" step="0.01" readonly />
                     </div>
                    </div>
                   <div>
@@ -142,6 +197,18 @@
                     <div class="form-label" id="rtn" style="display: none">
                       RTN <input type="text" class="form-control" name="rtn" />
                     </div>
+                    <div>
+                    <label for="formaPago" class="form-label">Selecione la forma de pago</label>
+                    <select
+                      id="formaPago"
+                      class="form-select"
+                      name="formaPago"
+                    > <option value="linkdepago" type="text">Link de pago</option>
+                      <option value="efectivo" type="text">Efectivo</option>
+                      <option value="cheque" type="text">Cheque</option>
+                    </select>
+                  </div>
+                  <div><br></div>
                     <div>
                       <input
                         type="checkbox"
@@ -190,22 +257,25 @@
 
       <!-- CALCULAR TOTAL -->
       <script>
+
+
         function calculateTotal() {
           var metro = parseInt(document.getElementById("metros").value);
-          var prec = 660;
-          var total = metro * prec;
-          var pag = 0;
+          var prec = parseFloat(document.getElementById("precio").value);
+          var total = parseFloat(metro * prec);
+          var pag = "PROCESANDO"
           var sald = total;
-          var estado = "SINPAGO"
-          var responsabilidad = "Humberto Giron"
-          var email ="geniosmarketinghn@gmail.com"
-          document.getElementById("total").value = total;
+          var estado = "-----"
+          var responsabilidad = "Berta Diocinia Mejía"
+          var email ="proyectoescuelaecsa@gmail.com"
+          document.getElementById("total").value = total.toFixed(2);
           document.getElementById("pago").value = pag;
           document.getElementById("saldo").value = sald;
           document.getElementById("estado1").value = estado;
           document.getElementById("responsable").value = responsabilidad;
           document.getElementById("destinatario").value = email;
         }
+        
       </script>
       <!-- CONDICIONES DE MOSTAR SI QUIEREN CONSTANCIA Y OCULATAR SI NO QUIEREN CONSTANCIA -->
       <script>
@@ -232,7 +302,7 @@
         crossorigin="anonymous"
       ></script>
     </div>
-
+<br>
     <footer class="bg-dark text-center text-white">
       <!-- Grid container -->
       <div class="container p-4 pb-0">

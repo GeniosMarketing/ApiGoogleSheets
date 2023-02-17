@@ -1,11 +1,10 @@
-//transporte_cuenta.json
 {
     "service": "gmail",
     "auth": {
       "type": "OAuth2",
-      "user": "geniosmarketinghn@gmail.com",
-      "clientId": "924483394243-6utd1l9ofdelic38euqd6fo4tomqq5fm.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//04XxXhyJvKcWICgYIARAAGAQSNwF-L9IrVoY3JsV0hDYnlqfQ58VstVjZtpUvbkMUqFTCZp7bTkuVFalJZcUgNyEcxEzEQBHXN-g"
+      "user": "proyectoescualaecsa@gmail.com",
+      "clientId": "700998888142-dl5c21fa6i6mh1a2fl2f4miei8745j62.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04WDRhjfb9GblCgYIARAAGAQSNwF-L9IrL-JN7nXzphBo2WpNyBs56i6Mo9O6a_HxVYicSOcYEl9YNQ0yr2_H6xxXqKvw6DyjxrU"
     }
   }
