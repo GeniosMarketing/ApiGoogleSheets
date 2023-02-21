@@ -1,0 +1,25 @@
+CREAR API DE GMAIL
+//https://console.cloud.google.com/
+//URI de redireccionamiento autorizado
+//https://developers.google.com/oauthplayground
+// https://developers.google.com/oauthplayground
+//AUTHORIZE Apis https://mail.google.com/
+Tutorial: https://www.youtube.com/watch?v=W3jGtgva46w&t=1s
+
+
+Api GMail
+ID de cliente: 700998888142-dl5c21fa6i6mh1a2fl2f4miei8745j62.apps.googleusercontent.com
+Secreto del cliente: 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
+
+REFRESH TOKEN: 1//04WDRhjfb9GblCgYIARAAGAQSNwF-L9IrL-JN7nXzphBo2WpNyBs56i6Mo9O6a_HxVYicSOcYEl9YNQ0yr2_H6xxXqKvw6DyjxrU
+ACCESS TOKEN: ya29.a0AVvZVsp9O-NiaRpjm3fQ73Ca80i3_QyArk8CUZRRLXwCdyloGW99jvoI0KIRCI8x3d1ufha8cLhfuF1W4XiDauMXX26fAmv8cCwZjBfYOFQVwl67AR1HmhjoaY8yYWzuVkyb4SUJkJJJYzLsvTIqO_YprVhyaCgYKAdQSARASFQGbdwaIDPQ1yd3buefdSQUOqLMxxA0163
+
+
+GOOGLE SHEETS API
+Tutorial: https://www.youtube.com/watch?v=PFJNJQCU_lo&t=299s
+Correo: registro-cancha@api-sheest.iam.gserviceaccount.com
+
+
+
+NODE MAILER
+https://www.youtube.com/watch?v=Zr2pqmyCgTQ
