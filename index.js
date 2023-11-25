@@ -47,8 +47,7 @@ app.post("/", async (req, res)=>{
     range: "Registro!A:P",
     valueInputOption: "USER_ENTERED",
     resource: {
-        values: [
-            [num_compra, nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, formaPago, destinatario, estado1, responsable]],
+        values: [[num_compra, nombre, telefono, correo, metros, precio, total, constancia, empresa, rtn, pago, saldo, formaPago, destinatario, estado1, responsable]],
     },
    });
 
